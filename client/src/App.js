@@ -10,6 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App container">
+        <div>
+          <h1 className='text-primary'>myfinancepal</h1>
+          <hr></hr>
+        </div>
         <Switch>
           <Route exact path="/">
             <SignIn></SignIn>
