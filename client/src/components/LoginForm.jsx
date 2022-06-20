@@ -28,7 +28,7 @@ const LoginForm = () => {
 
     return (
         <div>
-            <h3 className="mb-3 text-primary" >Login</h3>
+            <h2 className="mb-4 mt-3" >Login</h2>
             <form onSubmit={loginHandler}>
                 <div className="form-group mb-3">
                     <label className="mb-1">Email</label>
@@ -39,7 +39,7 @@ const LoginForm = () => {
                     <input type="password" name="password" className="form-control" onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <p className="text-danger">{formErrors}</p>
-                <input type="submit" className="btn btn-primary" value="Login" />
+                <input type="submit" className="btn btn-green mt-2" value="Login" />
             </form>
         </div>
     )

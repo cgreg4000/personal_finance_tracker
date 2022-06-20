@@ -33,34 +33,34 @@ const RegistrationForm = () => {
 
     return (
         <div>
-            <h3 className="mb-3 text-primary">Register</h3>
+            <h2 className="mb-4 mt-3">Register</h2>
             <form onSubmit={registerHandler}>
                 <div className="form-group">
-                    <label className="mb-1 text-primary">First Name</label>
+                    <label className="mb-1">First Name</label>
                     <input type="text" name="firstName" className="form-control" onChange={(e) => setFirstName(e.target.value)} />
-                    <p className="color-red">{formErrors.firstName?.message}</p>
+                    <p className="text-danger">{formErrors.firstName?.message}</p>
                 </div>
                 <div className="form-group">
-                    <label className="mb-1 text-primary">Last Name</label>
+                    <label className="mb-1">Last Name</label>
                     <input type="text" name="lastName" className="form-control" onChange={(e) => setLastName(e.target.value)} />
-                    <p className="color-red">{formErrors.lastName?.message}</p>
+                    <p className="text-danger">{formErrors.lastName?.message}</p>
                 </div>
                 <div className="form-group">
-                    <label className="mb-1 text-primary">Email</label>
+                    <label className="mb-1">Email</label>
                     <input type="text" name="email" className="form-control" onChange={(e) => setEmail(e.target.value)} />
-                    <p className="color-red">{formErrors.email?.message}</p>
+                    <p className="text-danger">{formErrors.email?.message}</p>
                 </div>
                 <div className="form-group">
-                    <label className="mb-1 text-primary">Password</label>
+                    <label className="mb-1">Password</label>
                     <input type="password" name="password" className="form-control" onChange={(e) => setPassword(e.target.value)} />
-                    <p className="color-red">{formErrors.password?.message}</p>
+                    <p className="text-danger">{formErrors.password?.message}</p>
                 </div>
                 <div className="form-group">
-                    <label className="mb-1 text-primary">Confirm Password</label>
+                    <label className="mb-1">Confirm Password</label>
                     <input type="password" name="confirmPassword" className="form-control" onChange={(e) => setConfirmPassword(e.target.value)} />
-                    <p className="color-red">{formErrors.confirmPassword?.message}</p>
+                    <p className="text-danger">{formErrors.confirmPassword?.message}</p>
                 </div>
-                <input type="submit" className="btn btn-primary" value="Register" />
+                <input type="submit" className="btn btn-green mt-2" value="Register" />
             </form>
         </div>
     )

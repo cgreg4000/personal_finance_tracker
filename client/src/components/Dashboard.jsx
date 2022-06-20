@@ -50,15 +50,19 @@ const Dashboard = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <div className="flex mt-3">
-                <h1>Welcome {loggedInUser.firstName}!</h1>
+                <div className="flex-branding">
+                    <img className="logo" src="/images/finance-svgrepo-com.svg" alt="logo" />
+                    <h1 className='color-green m-4'>myFinancePal</h1>
+                </div>
                 <div>
                     <Link className="btn btn-dark m-3" to="/expenses/add">Add Expense</Link>
                     <button className="btn btn-dark" onClick={logout}>Logout</button>
                 </div>
             </div>
-            <h2 className="mb-4">Expense Dashboard</h2>
+            <hr />
+            <h2 className="mb-4">{loggedInUser.firstName}'s Expense Dashboard</h2>
             <select onChange={(e) => { setSelectedCategory(e.target.value) }}>
                 <option value="">--</option>
                 <option value="Food">Food</option>
@@ -86,8 +90,8 @@ const Dashboard = () => {
                 <tbody>
                     {
                         expenseList.map((expenseObject) => {
-                            if (selectedCategory.length !== 0){
-                                if (expenseObject.expenseCategory === selectedCategory){
+                            if (selectedCategory.length !== 0) {
+                                if (expenseObject.expenseCategory === selectedCategory) {
                                     return (
                                         <tr key={`${expenseObject._id}`}>
                                             <td>{expenseObject.expenseName}</td>
@@ -98,7 +102,7 @@ const Dashboard = () => {
                                         </tr>
                                     )
                                 }
-                            }else{
+                            } else {
                                 return (
                                     <tr key={`${expenseObject._id}`}>
                                         <td>{expenseObject.expenseName}</td>
